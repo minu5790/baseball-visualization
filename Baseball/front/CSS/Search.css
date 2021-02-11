@@ -1,0 +1,33 @@
+.searchbox{
+    margin : 1rem;
+    width: 25%;
+    float: right;
+    z-index: -1;
+}
+
+.Search_Bar{
+    display:inline-block;
+    padding: 0;
+    margin: 0;
+    width : 100%;
+}
+
+.searchList{
+    position: fixed;
+    float:left;
+    width: 25%;
+    padding:0;
+    background-color: rgba(200,200,200);
+    z-index: 3;
+}
+
+.searchList ul{
+    display: none;
+    list-style: none;
+    z-index: 3;
+}
+
+.search_content{
+     color: black;
+     z-index: 3;
+}

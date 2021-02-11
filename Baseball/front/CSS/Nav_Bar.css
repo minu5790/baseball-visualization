@@ -1,0 +1,19 @@
+.menu {
+    float:left;
+    margin: 1rem;
+    width:40%;
+}
+
+.menu a{
+    color:#AAAAAA;
+    margin: 11px;
+    padding: 7px;
+    font-size: 20px;
+    text-align: center;
+    border: #AAAAAA 1px solid;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color:black;
+}

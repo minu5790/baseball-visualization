@@ -1,0 +1,89 @@
+/* Reset Body */
+body{
+	padding : 0px;
+    margin : 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/*
+    Primary color         #99ccff
+    Primary bright color  #3399FF
+    Gray bg               #f6f6f6
+    Dark Gray bg          #eeeeee
+*/
+.Header{
+    position: fixed;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.Player_Container{
+    margin: 0.5rem auto;
+    width:100%;
+}
+
+.Img_Container{
+    margin: 0.5rem;
+    float: left;
+    text-align: center;
+}
+
+.Img_Team{
+    width:150px;
+    height:100px;
+    border: 0;
+}
+
+.Player{
+    width:100%;
+    display:flex;
+}
+
+.Button_Container{
+    margin: 0.5rem;
+}
+
+.Button_Container button{
+    margin-right: 0.5rem;
+}
+
+.Contents_Container{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.Contents{
+	background-color: #FFFFFF;
+	height: 100%; /* 임시 높이 설정 */
+	margin: 0.5rem;
+	border-width: 0.1px;
+	border-color: #000000;
+	border-style: solid;
+}
+
+.Contents tr:hover{
+    background-color: lightgray;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.overlay_Contents{
+    position: absolute;
+    top: 33%;
+    width: 100%;
+    padding:0.5rem;
+    display: inline-block;
+    border-color: black;
+    border-width: 0.2rem;
+    background-color: rgba(255,255,255);
+}

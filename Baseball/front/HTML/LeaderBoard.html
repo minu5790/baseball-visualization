@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- StyleSheet 로드 -->
+  <link rel="stylesheet" href="../CSS/LeaderBoard.css">
+
+  <!-- FontAwesome(아이콘) 로드 -->
+  <link rel="stylesheet" href="../lib/FontAwesome/all.min.css">
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- BootStrap 로드 -->
+  <link rel="stylesheet" href="../lib/Bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../CSS/Search.css">
+
+  <link rel="stylesheet" href="../CSS/Nav_Bar.css">
+</head>
+
+<body>
+  <!-- 헤더 ( 검색창 ) -->
+
+  <div class="Header">
+    <div class="menu">
+      <a href="/" class="menu_main">메인</a>
+      <a href="/LeaderBoard" class="menu_leaderboard">리더보드</a>
+    </div>
+
+    <div class="searchbox">
+      <input class="form-control Search_Bar" id="sear" type="text" placeholder="  이름" onkeyup="search(this);">
+      <div class="searchList">
+        <ul id="PlayerList" role="listbox"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="Wrapper">
+
+    <div class="buttons">
+      <button type="button" class="btn-lg" id="p_button">2019 ERA</button>
+      <button type="button" class="btn-lg" id="b_button">2019 HR</button>
+    </div>
+  
+    <!-- 드롭다운 -->
+    <div class="btn-group Dropdown_Container">
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" id="year_tag">
+          년도 설정
+        </button>
+        <div class="dropdown-menu" id="year_val">
+          <a class="dropdown-item" href="#" value="2019">2019</a>
+          <a class="dropdown-item" href="#" value="2018">2018</a>
+          <a class="dropdown-item" href="#" value="2017">2017</a>
+          <a class="dropdown-item" href="#" value="2016">2016</a>
+          <a class="dropdown-item" href="#" value="2015">2015</a>
+          <a class="dropdown-item" href="#" value="2014">2014</a>
+          <a class="dropdown-item" href="#" value="2013">2013</a>
+          <a class="dropdown-item" href="#" value="2012">2012</a>
+          <a class="dropdown-item" href="#" value="2011">2011</a>
+          <a class="dropdown-item" href="#" value="2010">2010</a>
+          <a class="dropdown-item" href="#" value="2009">2009</a>
+          <a class="dropdown-item" href="#" value="2008">2008</a>
+          <a class="dropdown-item" href="#" value="2007">2007</a>
+          <a class="dropdown-item" href="#" value="2006">2006</a>
+          <a class="dropdown-item" href="#" value="2005">2005</a>
+          <a class="dropdown-item" href="#" value="2004">2004</a>
+          <a class="dropdown-item" href="#" value="2003">2003</a>
+          <a class="dropdown-item" href="#" value="2002">2002</a>
+          <a class="dropdown-item" href="#" value="2001">2001</a>
+          <a class="dropdown-item" href="#" value="2000">2000</a>
+          <a class="dropdown-item" href="#" value="1999">1999</a>
+          <a class="dropdown-item" href="#" value="1998">1998</a>
+          <a class="dropdown-item" href="#" value="1997">1997</a>
+          <a class="dropdown-item" href="#" value="1996">1996</a>
+          <a class="dropdown-item" href="#" value="1995">1995</a>
+          <a class="dropdown-item" href="#" value="1994">1994</a>
+          <a class="dropdown-item" href="#" value="1993">1993</a>
+          <a class="dropdown-item" href="#" value="1992">1992</a>
+          <a class="dropdown-item" href="#" value="1991">1991</a>
+          <a class="dropdown-item" href="#" value="1990">1990</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" id="index_tag">
+          지표 설정
+        </button>
+        <div class="dropdown-menu" id="index_val">
+          <div class="dropdown-header">투수</div>
+          <a class="dropdown-item" href="#" value="p-g">경기</a>
+          <a class="dropdown-item" href="#" value="p-gs">선발</a>
+          <a class="dropdown-item" href="#" value="p-w">승</a>
+          <a class="dropdown-item" href="#" value="p-l">패</a>
+          <a class="dropdown-item" href="#" value="p-hld">홀드</a>
+          <a class="dropdown-item" href="#" value="p-sv">세이브</a>
+          <a class="dropdown-item" href="#" value="p-era">ERA</a>
+          <a class="dropdown-item" href="#" value="p-ip">이닝</a>
+          <a class="dropdown-item" href="#" value="p-h">피안타</a>
+          <a class="dropdown-item" href="#" value="p-hr">피홈런</a>
+          <a class="dropdown-item" href="#" value="p-r">실점</a>
+          <a class="dropdown-item" href="#" value="p-so">삼진</a>
+          <a class="dropdown-item" href="#" value="p-bb">볼넷</a>
+          <a class="dropdown-item" href="#" value="p-whip">WHIP</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header">타자</div>
+          <a class="dropdown-item" href="#" value="b-g">경기</a>
+          <a class="dropdown-item" href="#" value="b-ab">타수</a>
+          <a class="dropdown-item" href="#" value="b-r">득점</a>
+          <a class="dropdown-item" href="#" value="b-h">안타</a>
+          <a class="dropdown-item" href="#" value="b-hr">홈런</a>
+          <a class="dropdown-item" href="#" value="b-rbi">타점</a>
+          <a class="dropdown-item" href="#" value="b-bb">볼넷</a>
+          <a class="dropdown-item" href="#" value="b-so">삼진</a>
+          <a class="dropdown-item" href="#" value="b-sb">도루</a>
+          <a class="dropdown-item" href="#" value="b-hbp">사구</a>
+          <a class="dropdown-item" href="#" value="b-avg">타율</a>
+          <a class="dropdown-item" href="#" value="b-obp">출루율</a>
+          <a class="dropdown-item" href="#" value="b-slg">장타율</a>
+          <a class="dropdown-item" href="#" value="b-ops">OPS</a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary btn-lg s_button" id="s_button">검색</button>
+  
+    <div class="Contents_Container">
+      <div class="Contents">
+        <table class="table " id="contents">
+  
+        </table>
+  
+      </div>
+      <br>
+    </div>
+  </div>
+  
+</body>
+
+<!-- jQuery 로드 -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+<!-- FontAwesome(아이콘) 로드 -->
+<script src="../lib/FontAwesome/all.min.js"></script>
+
+<!-- BootStrap 로드 -->
+<script src="../lib/Bootstrap/bootstrap.min.js"></script>
+
+<script src="../JS/LeaderBoard.js"></script>
+<script src="../JS/Search.js"></script>

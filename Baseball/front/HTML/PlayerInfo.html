@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- StyleSheet 로드 -->
+    <link rel="stylesheet" href="../CSS/PlayerInfo.css">
+
+    <!-- FontAwesome(아이콘) 로드 -->
+    <link rel="stylesheet" href="../lib/FontAwesome/all.min.css">
+
+    <!-- BootStrap 로드 -->
+    <link rel="stylesheet" href="../lib/Bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../CSS/Search.css">
+
+    <link rel="stylesheet" href="../CSS/Nav_Bar.css">
+</head>
+
+<body>
+    <!-- 헤더 ( 검색창 ) -->
+
+    <div class="Header">
+        <div class="menu">
+            <a href="/" class="menu_main">메인</a>
+            <a href="/LeaderBoard" class="menu_leaderboard">리더보드</a>
+        </div>
+
+        <div class="searchbox">
+            <input class="form-control Search_Bar" id="sear" type="text" placeholder="  이름" onkeyup="search(this);">
+            <div class="searchList">
+                <ul id="PlayerList" role="listbox"></ul>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="Player_Container">
+        <div class="Player">
+            <div class="Img_Container">
+                <img class="Img_Team" id='Img_Team'>
+            </div>
+            <div class="Basic_Info" id="Basic_Info">
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="Button_Container">
+        <button class="btn btn-warning" type="button" id="Button_Report"> 3D 리포트 </button>
+    </div>
+
+    <!-- 컨텐츠 영역 -->
+    <div class="Contents_Container">
+        <div class="Contents">
+            <table class="table table-sm">
+                <thead class="thead-dark" id="thead-dark2">
+                    <tr>
+
+                    </tr>
+                </thead>
+                <tbody id="t"></tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+
+    &nbsp&nbsp 2020 시즌 예상 기록
+    <div class="Contents_Container">
+        <div class="Contents">
+            <table class="table table-sm" id= "Predict_Table">
+                <thead class="thead-dark" id="Predict_Table_Thead"></thead>
+                <tbody id="Predict_Table_Tbody"></tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+
+    <div>
+        <table id="boardList" border="1"></table>
+    </div>
+</body>
+
+<!-- jQuery 로드 -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<!-- FontAwesome(아이콘) 로드 -->
+<script src="../lib/FontAwesome/all.min.js"></script>
+
+<!-- BootStrap 로드 -->
+<script src="../lib/Bootstrap/bootstrap.min.js"></script>
+
+<script src="../JS/PlayerInfo.js"></script>
+<script src="../JS/Search.js"></script>

@@ -1,0 +1,69 @@
+/* Reset Body */
+body{
+	padding : 0px;
+	margin : 0px;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*
+    Primary color         #99ccff
+    Primary bright color  #3399FF
+    Gray bg               #f6f6f6
+    Dark Gray bg          #eeeeee
+*/
+
+.Header{
+	width: 100%;
+	float: right;
+    background-color: #FFFFFF;
+}
+
+.buttons{
+	margin: 1rem;
+	width:98%;
+	float: left;
+}
+
+.buttons .selected {
+	background:lightblue;
+}
+
+.Dropdown_Container{
+	float: left;
+}
+
+.Dropdown_Container .dropdown{
+	margin: 1rem;
+	margin-right: 0;
+}
+
+.dropdown-menu {
+	max-height: 400px;
+	overflow:scroll;
+}
+
+.s_button{
+	margin:1rem;
+}
+
+.Contents_Container{
+	width: 100%;
+	height: 100%;
+	float: left;
+	margin-left: 0.5rem;
+}
+
+.Contents{
+	background-color: #FFFFFF;
+	height: 100%;/* 임시 높이 설정 */
+	margin: 0.5rem;
+	border-width: 0.1px;
+	border-color: #000000;
+	border-style: solid;
+}
+
+.Wrapper{
+	margin:0.5rem;
+}
